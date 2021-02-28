@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*相邻块元素： father 和 father2 的上下边距应该取最大  */
+        .father {
+            /* display: inline-block; */
+            margin: 25px;
+
+            /* 清除塌陷 */
+            /* border: 2px solid black; */
+            /* overflow: hidden; */
+
+            /* padding: 20px; */
+            width: 400px;
+            height: 300px;
+            background-color: pink;
+
+        }
+
+        /* 嵌套块元素：father 和 son 的 塌陷 */
+        .son {
+            margin: 25px;
+            width: 200px;
+            height: 200px;
+            border: 2px solid blue;
+            background-color: tomato;
+
+        }
+
+        .father2 {
+            margin: 10px;
+            border: 2px dotted red;
+            width: 300px;
+            height: 150px;
+            background-color: teal;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="father">
+        <div class="son"></div>
+
+    </div>
+    <div class="father2"> </div>
+</body>
+
+</html>

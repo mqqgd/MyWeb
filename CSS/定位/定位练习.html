@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .model1 {
+            width: 400px;
+            height: 300px;
+            background-color: pink;
+            /* relative会继续保留原来的位置，absolute不再占有原先位置 */
+            position: relative;
+            left: 200px;
+
+        }
+
+        .model1 .son {
+            width: 50px;
+            height: 100px;
+            background-color: teal;
+            position: absolute;
+            left: 30px;
+
+        }
+
+        .model2 {
+            width: 150px;
+            height: 200px;
+            background-color: skyblue;
+
+        }
+
+        .model3 {
+            width: 200px;
+            height: 200px;
+            background-color: turquoise;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="model1">
+        <div class="son1">模块一的son</div>
+    </div>
+    <div class="model2">模块二</div>
+    <div class="model3">模块三</div>
+
+</body>
+
+</html>
