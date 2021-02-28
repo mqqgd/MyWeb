@@ -18,7 +18,7 @@
     <!-- <script>
         var n = parseInt(window.prompt("input"));
 
-        multi = 1;
+        var multi = 1;
         for (var i = 0; i < n; i++) {
             multi *= 2;
         }
@@ -27,45 +27,83 @@
     </script> -->
 
     <!-- 第二题：计算n的阶乘 -->
-    <script>
+    <!-- <script>
         var n = parseInt(window.prompt('input'));
 
-        multi = 1;
+        var multi = 1;
         for (var i = 1; i <= n; i++) {
             multi *= i;
         }
         document.write(multi);
-    </script>
+    </script> -->
 
     <!-- 第三题：斐波那契数列，输出第n项 -->
     <!-- <script>
         var n = parseInt(window.prompt("input"));
-        if (n == 1 || n == 2) {
-            doucument.write(n);
+        var first = 1;
+        var second = 1;
+        var third;
+        if (n < 3) {
+            document.write("1")
         }
         else {
-            document.write((n - 1) + (n - 2));
+            for (i = 2; i < n; i++) {
+                third = first + second;
+                first = second;
+                second = third;
+            }
+            document.write(third);
         }
-
     </script> -->
 
     <!-- 第四题：输入一个三位数的正整数，输出时反向输出 -->
     <!-- <script>
+        //  456
         var n = parseInt(window.prompt("input"));
+        // var c = parseInt(n / 100); // 4
+        // var b = ((n - c * 100) / 10).toFixed(0); // 5 
+
+        var b = (n - (n % 100)) / 100;;   //百位   (n - (n % 100)) / 100;  
+        var a = n % 10; // 个位
+        var c = (n % 100 - a) / 10;  //十位
+
+
+        document.write(a + '\n' + c + '\n' + b);
+
+
+
 
     </script> -->
 
     <!-- 第五题：输入a,b,c三个数字，打印出最大的 -->
-
-    <!-- 第六题：打出100以内的质数 -->
     <!-- <script>
-        for (var i = 1; i <= 100; i++) {
-            if (i % 1 == 0 && i % i == 0) {
-                document.write(i + "")
+        var a = parseInt(window.prompt("input"));
+        var b = parseInt(window.prompt("input"));
+        var c = parseInt(window.prompt("input"));
 
+        if (a > b) {
+            if (a > c) {
+                document.write(a);
+            }
+            else {
+                document.write(c)
             }
         }
+        else {
+            if (b > c) {
+                document.write(b);
+            }
+            else {
+                document.write(c);
+            }
+        }
+
     </script> -->
+
+    <!-- 第六题：打出100以内的质数 -->
+    <script>
+
+    </script>
 
 
 </body>

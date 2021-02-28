@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let const var 啥都没有的区别
+        /* {
+            var a = 5
+            b = 4
+            let c = 6
+            const d = 7
+        } */
+        function b() {
+            console.log('呵呵');
+        }
+        function c() {
+            d = 5;
+            var b = 4;
+        }
+        c()
+        console.log(b);
+
+
+        // 一个在函数外边可以访问到，一个不能
+
+        // Es6新出的 let const
+        // console.log(a);
+        // console.log(b);
+        // console.log(c);
+        document.write(b)
+        document.write(d)
+    </script>
+</body>
+
+</html>
