@@ -24,20 +24,24 @@
 // demo();    //demo执行b执行，demo其实就是b
 
 
-//闭包
-function test() {
-    var arr = [];
-    for (var i = 0; i < 10; i++) {
-        arr[i] = function () {
-            console.log(i);
+// //闭包
+// function test() {
+//     var arr = [];
+//     for (var i = 0; i < 10; i++) {
+//         arr[i] = function () {
+//             console.log(i);
 
-        }
-    }
-    return arr;
-}
+//         }
+//     }
+//     return arr;
+// }
 
-var myArr = test();
-// myArr[0]();
-for (var j = 0; j < 10; j++) {
-    myArr[j]();  //会打出10个10
-}
+// //外部执行
+// var myArr = test();
+
+// for (var j = 0; j < 10; j++) {
+//     myArr[j]();  //会打出10个10
+// }
+
+
+

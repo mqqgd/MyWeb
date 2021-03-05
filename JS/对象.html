@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // //练习1
+        // var mrLiu = {
+        //     name: "liu",
+        //     age: 100,
+        //     sex: "male",
+        //     longevity: 120,
+
+        //     study: function () {
+        //         console.log("he is studing pr");
+        //         this.longevity++;
+        //     },
+        //     lay: function () {
+        //         console.log("he is lazzy");
+        //         this.longevity--;
+        //     }
+        // }
+        // // mrLiu.study();
+        // mrLiu.lay();
+        // console.log(mrLiu.longevity);
+
+
+        // //练习2  构造函数方法创建对象
+        // function Car() {
+        //     this.name = "lalala";
+        //     this.height = 1000;
+        //     this.weight = 150;
+        //     this.health = 100;
+        //     this.run = function () {
+        //         this.health--;
+        //     }
+        // }
+        // var car = new Car();
+        // var car1 = new Car();
+
+
+        //练习3
+        // function Car(name, color) {
+        //     this.name = name;
+        //     this.color = color;
+        // }
+        // var car = new Car("lala", "blue");
+
+
+        //练习4  构造函数内部原理
+        // function Person(name, height) {
+        //     this.name = name;
+        //     this.height = height;
+        //     this.say = function () {
+        //         console.log(this.say)
+        //     }
+        //     return name;
+        // }
+
+        // var person = new Person("ma", 100);
+
+
+        //练习5  包装类
+        // var str = "abc";
+        // str += 1;
+        // var test = typeof (str);
+        // if (test.length == 6) {
+        //     test.sign = "typeof的返回值可能为String"
+
+        // }
+        // console.log(test.sign)
+
+        //练习6  method1
+        // var str = "sgnd我都唔";
+
+
+        function bytesLength(str) {
+            var count = str.length;
+            for (var i = 0; i < str.length; i++) {
+                if (str.charCodeAt(i) > 255) {
+                    count++;
+                }
+            }
+            console.log(count);
+            // return count;
+        }
+        // var by = bytesLength("wode 名字")
+
+
+
+        //练习6  method2
+        // var str = "sgnd东瓯王";
+
+        // function bytesLenght(str) {
+        //     var count = 0;
+        //     for (var i = 0; i < str.length; i++) {
+
+        //         if (str.charCodeAt(i) > 255) {
+        //             count += 2;
+
+        //         }
+        //         else {
+        //             count++;
+        //         }
+        //     }
+        //     return count;
+        // }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
