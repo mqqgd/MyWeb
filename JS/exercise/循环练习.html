@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+           需求：打印倒金字塔，直角三角形
+           *****
+           ****
+           ***
+           **
+           *
+        */
+
+        //外联的js文件打印不出结果
+        /*原因：code runner 是 Node js 环境，是服务器端环境，
+        和浏览器相同的是具有相同的解析器，
+        用于解释js，但是浏览器里面有DOM，node中没有，
+        所以在页面中用的一些方法，在node环境无法使用 */
+
+
+        for (let i = 0; i < 5; i++) {
+            for (let j = i; j < 5; j++) {
+                console.log(i, j);
+                // console.log("*");
+                document.write("*");
+            }
+
+            // document.write("<br>");
+        }
+
+
+
+
+
+        // var a = '';
+        // for (let i = 0; i < 5; i++) {
+        //     for (let j = 0; j < i; j++) {
+        //         a += "*";
+        //         console.log(a);
+        //     }
+
+        //     // document.write("<br>");
+        // }
+        // console.log("\n");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

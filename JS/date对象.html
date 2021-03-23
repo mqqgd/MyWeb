@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh"> //zh-CN
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绑定事件</title>
+
+</head>
+
+<body>
+    <ul>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+
+    </ul>
+
+    <script>
+        // 绑定事件
+        let li = document.getElementsByTagName("li");
+        for (let i = 0; i < li.length; i++) {
+            li[i].addEventListener("click", function () {
+                alert(i);
+            }, false)
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
