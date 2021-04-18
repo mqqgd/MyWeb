@@ -1,20 +1,27 @@
-/* 插入排序思想：
-    将当前元素与前面的数作比较，如果小，就往前插。
-    即，每次将当前元素插入到左侧已排好序的数组中，插入后保持有序。
+/* 改进的插入排序
+    思想：设置间隔(h < N/3)，插入排序。间隔大，移动次数少；间隔小，移动距离小；
+        缩小间隔继续排。
 
-    交换次数：逆序数量    平均交换N^2/4   比较N^2/4
-    时间复杂度取决于数组的初始顺序    最坏情况：倒序数组 N^2
+    时间复杂度：O(N^1.3)
 */
-function InsertionSort(arr) {
 
-    let len = arr.length
+function ShellSort(arr) {
 
-    for (let i = 0; i < len; i++) {
-        for (let j = i; j > 0 && arr[j] < arr[j - 1]; j--) {
-            swap(arr, j, j - 1);
+    let len = arr.length;
+    let h = 1;
 
-        }
+    while (h < len / 3) {
+        h = 3 * h + 1; //Knuth 序列
     }
+    while (h > 1) {
+        for (let i = h; i < len; i++) {
+            for (let j = i; j >= h && arr[j] < arr[j - h]; j -= h) {
+                swap(arr, j, j - h);
+            }
+        }
+        h = h / 3;
+    }
+
 
     function swap(arr, a, b) {
         let temp = arr[a];
@@ -25,9 +32,6 @@ function InsertionSort(arr) {
     console.log(arr);
     return arr;
 }
-
-// arr = [2, 4, 7, 1, 3, 9, 0];
-// InsertionSort(arr);
 
 // 对数器
 
@@ -44,7 +48,7 @@ function RandomArr() {
 // function testSort() {
 let randomarr = RandomArr();
 // let res = SelectionSort(randomarr);
-let res = InsertionSort(randomarr);
+let res = ShellSort(randomarr);
 randomarr.sort();
 let tag = true;
 

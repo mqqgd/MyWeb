@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .box {
+            width: 1226px;
+            height: 285px;
+            background-color: #ccc;
+            margin: 0 auto;
+        }
+        
+        .box li {
+            width: 296px;
+            height: 285px;
+            float: left;
+            background-color: pink;
+            margin-right: 14px;
+        }
+        /* 最后一个盒子要去掉margin，不然会掉下去的 */
+        
+        .box .li4 {
+            margin-right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li>我是盒子1</li>
+            <li>我是盒子2</li>
+            <li>我是盒子3</li>
+            <li class="li4">我的盒子4</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

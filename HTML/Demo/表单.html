@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h3>个人简介</h3>
-    <table  width="600">
+    <table width="600">
         <!-- 第一行 -->
         <tr>
             <td>性别</td>
             <td>
-                <!-- name：表单名称  单选框和复选框的name要一样  value:表单值  上传表单时候用的 -->
-                <input type="radio" name="sex" value="man" id="sex"><img src="image/nan.jpg" height="23"><label for="sex">  男  </label>
-                <input type="radio" name="sex" value="women" id="sex"><img src="image/women.jpg" height="25"><label for="sex">  女 </label>
+                <!-- name：表单名称  单选框和复选框的name要一样  value:表单值  上传表单时候用的  -->
+                <!-- 注意：id不能一样，id和label的for属性要一致，否则会出错 -->
+                <input type="radio" name="sex" value="nan" id="sex"><label for="sex"> <img src="image/nan.jpg" height="23"> 男  </label>
+                <input type="radio" name="sex" value="nan" id="sex"><img src="image/women.jpg" height="25"><label for="sex">  女 </label>
             </td>
         </tr>
 
@@ -80,17 +83,17 @@
         <tr>
             <td>婚姻状态</td>
             <td>
-                <!-- label增加用户体验 -->
-                <input type="radio" name="marry" id="marry" checked="checked"><label for="marry">未婚</label>
-                <input type="radio" name="marry" id="marry"><label for="marry">已婚</label>
-                <input type="radio" name="marry" id="marry"><label for="marry">离婚</label>
+                <!-- label增加用户体验, for属性的值不能一样 -->
+                <input type="radio" name="marry" id="unmarry" checked="checked"><label for="unmarry">未婚</label>
+                <input type="radio" name="marry" id="married"><label for="married">已婚</label>
+                <input type="radio" name="marry" id="divorce"><label for="divorce">离婚</label>
             </td>
         </tr>
 
         <!-- 第五行 -->
         <tr>
             <td>学历</td>
-            <td><input type="text" ></td>
+            <td><input type="text"></td>
         </tr>
 
         <!-- 第六行 -->
@@ -147,4 +150,8 @@
 
     </table>
 </body>
+
+
+
+
 </html>

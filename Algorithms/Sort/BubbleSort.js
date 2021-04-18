@@ -1,6 +1,21 @@
-/* 思想：两两比较，两两交换，每轮排出一个最大的数，在右端 */
+/* 思想：相邻两两比较，两两交换，较大的放后面，每轮排出一个最大的数，在右端 */
 
 function BubbleSort(arr) {
+
+    let len = arr.length;
+    if (!arr || len < 2) {
+        return;
+    }
+
+    for (let i = len - 1; i > 0; i--) {
+
+        for (let j = 0; j < i; j++) {
+            if (arr[j] > arr[j + 1]) {
+                swap(arr, j, j + 1);
+            }
+        }
+
+    }
 
     function swap(arr, a, b) {
         let temp = arr[a];
@@ -8,19 +23,10 @@ function BubbleSort(arr) {
         arr[b] = temp;
     }
 
-    let len = arr.length;
-    for (let i = 0; i < len - 1; i++) {
-        let minpos = i;
-        for (let j = i + 1; j < len; j++) {
-            minpos = (arr[j] > arr[minpos]) ? minpos : j;
-        }
-        swap(arr, minpos, i);
-    }
-
     console.log(arr);
     return arr;
 
 }
 
-// let arr = [2, 4, 1, 6, 9, 3, 6];
-// BubbleSort(arr);
+let arr = [2, 4, 1, 6, 9, 3, 6];
+BubbleSort(arr);
