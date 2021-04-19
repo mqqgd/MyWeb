@@ -1,16 +1,6 @@
 // 问题：用递归和非递归的方式实现二叉树的先序遍历
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {TreeNode} root
- * @return {number[]}
- */
+// 思路： 使用栈，当前节点压栈，然后弹出，先压右，再压左
+
 
 // 非递归方法
 function preorderTraversal(root) {

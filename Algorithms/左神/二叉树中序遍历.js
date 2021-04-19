@@ -41,7 +41,7 @@ function inorderTraversal(root) {
     let stackArr = [];
     let res = [];
     if (root != undefined) {
-        while (stackArr != 0 || root != undefined) {
+        while (stackArr.length != 0 || root != undefined) {
             if (root != undefined) {
                 stackArr.push(root);
                 root = root.left;
