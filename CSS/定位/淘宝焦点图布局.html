@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>轮播图-静态版</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .tb-promo {
+            position: relative;
+            width: 520px;
+            height: 280px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+        
+        .tb-promo img {
+            width: 520px;
+            height: 280px;
+        }
+        
+        .pre,
+        .next {
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+            width: 20px;
+            height: 30px;
+            /* 问题？ */
+            /* text-align: center; */
+            background: rgba(0, 0, 0, 0.7);
+            line-height: 30px;
+            color: #fff;
+        }
+        
+        .pre {
+            left: 0;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+        
+        .next {
+            right: 0;
+            /* 问题？ */
+            text-align: right;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+        
+        .promo-nav {
+            position: absolute;
+            /* 问题 */
+            /* 定位到下方 */
+            bottom: 13px;
+            left: 50%;
+            margin-left: -40px;
+            width: 80px;
+            height: 15px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 7px;
+        }
+        
+        .promo-nav li {
+            /* bottom: 13px;
+            left: 50%;
+            margin-left: -4px; */
+            float: left;
+            width: 8px;
+            height: 8px;
+            margin: 4px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+        /* .promo-nav li:hover {
+            background-color: tomato;
+        } */
+        
+        .promo-nav .selected {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tb-promo">
+        <!-- <div class="mask"></div> -->
+        <img src="../../CSS/images/tb-promo.jpg" alt="" />
+        <div class="pre">&lt;</div>
+        <div class="next">&gt;</div>
+        <ul class="promo-nav">
+            <li class="selected"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>

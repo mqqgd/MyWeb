@@ -7,7 +7,7 @@ function preorderTraversal(root) {
     // var preorderTraversal = function(root) {
     let stackArr = [];
     let res = [];
-    if (root != undefined) {
+    if (root !== null) {
         stackArr.push(root);
 
         while (stackArr.length != 0) {
@@ -16,10 +16,10 @@ function preorderTraversal(root) {
             res.push(root.val)
 
             //不可以写成root.right==null ,否则报错：TypeError: Cannot read property 'val' of undefined
-            if (root.right != undefined) {
+            if (root.right !== null) {
                 stackArr.push(root.right);
             }
-            if (root.left != undefined) {
+            if (root.left !== null) {
                 stackArr.push(root.left);
             }
         }
@@ -66,7 +66,8 @@ let root = new TreeNode(1);
 root.left = new TreeNode(2);
 root.right = new TreeNode(3);
 root.left.left = new TreeNode(4);
-root.left.right = new TreeNode(5);
+root.right.left = new TreeNode(5);
+root.right.right = new TreeNode(6);
 
 var pre = preorderTraversal(root);
 console.log(pre)
