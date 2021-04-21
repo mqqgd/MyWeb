@@ -1,6 +1,6 @@
 // 问题：二叉树的后序遍历  非递归实现
 
-function proOrderTraversal(root) {
+function postOrderTraversal(root) {
     // var proOrderTraversal = function(root) {
     let stackArr1 = [];
     let stackArr2 = [];
@@ -39,5 +39,5 @@ root.left.left = new TreeNode(4);
 root.right.left = new TreeNode(5);
 root.right.right = new TreeNode(6);
 
-var pre = proOrderTraversal(root);
+var pre = postOrderTraversal(root);
 console.log(pre)

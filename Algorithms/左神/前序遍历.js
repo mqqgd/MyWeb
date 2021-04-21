@@ -1,18 +1,17 @@
+// 前序遍历
 function preorderTraversal(root) {
     // var preOrderTraversal = function(root) {
     let stackArr = [];
     let res = [];
     if (root !== null) {
         stackArr.push(root);
-        while (stackArr.length != 0) {
+        while (stackArr.length) {
             root = stackArr.pop();
             res.push(root.val);
-            if (!root.right) {
-                //root.right !== null
+            if (root.right !== null) {
                 stackArr.push(root.right);
             }
-            if (!root.left) {
-                //root.left !== null
+            if (root.left !== null) {
                 stackArr.push(root.left);
             }
         }
