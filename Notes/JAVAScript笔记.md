@@ -285,7 +285,7 @@ typeof   数据
 
    - Number类型、Boolean类型 ---------->变量名称 . toString()
 
-   - 变量 or 常量、null 、undefined    --------> . String()
+   - 变量 or 常量、null 、undefined    --------> String（x)
 
    - 变量 or 常量    +  “ ”   or  ' '   （原理：同String()函数）
 
