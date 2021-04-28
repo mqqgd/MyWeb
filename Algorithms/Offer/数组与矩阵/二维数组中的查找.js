@@ -39,8 +39,14 @@ function findNumberIn2DArray(arr, target) {
 
     while (r < rows && c >= 0) {
         let rightTop = arr[r][c];
+        // 注释部分是额外加的功能，找到这个数返回其所在的行和列
+        // let res = [];
         if (target === rightTop) {
+            // res.push(r);
+            // res.push(c);
+            // return res;
             return true;
+
         } else if (target < rightTop) {
             c--;
         } else {
@@ -49,7 +55,7 @@ function findNumberIn2DArray(arr, target) {
     }
     return false;
 }
-let arr = [
+let matrix = [
     [1, 4, 7, 11, 15],
     [2, 5, 8, 12, 19],
     [3, 6, 9, 16, 22],
@@ -57,4 +63,6 @@ let arr = [
     [18, 21, 23, 26, 30]
 ];
 
-findNumberIn2DArray(arr, 9);
+console.log(findNumberIn2DArray(matrix, 15));
+
+// 测试完成

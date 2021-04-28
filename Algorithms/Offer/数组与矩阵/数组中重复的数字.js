@@ -7,47 +7,51 @@
 */
 
 //解法1
-// 时间复杂度: O(N) 空间复杂度: O(1)
+// 时间复杂度: O(N) 空间复杂度: O(1)  ==> 不能使用排序，不能使用额外的辅助空间
+// function findRepeatNumber(arr) {
+//     let len = arr.length;
 
-function findRepeatNumber(arr) {
-    let len = arr.length
+//     // 遍历
+//     for (let i = 0; i < len; i++) {
+//         while (arr[i] != i) {
+//             if (arr[i] == arr[arr[i]]) {
+//                 // 说明i与num[i]位置的元素相同，返回重复元素
+//                 let rep = arr[i];
+//                 return rep;
+//             }
+//             swap(arr, i, arr[i]);
+//         }
+//         // swap(arr, i, arr[i]);
+//     }
 
-    // let count = 0;
-    for (let i = 0; i < len; i++) {
-        while (arr[i] != i) {
-            if (arr[i] == arr[arr[i]]) {
-                let rep = arr[i];
-                return rep;
-            }
-            swap(arr, i, arr[i]);
-        }
-        // swap(arr, i, arr[i]);
-    }
+//     function swap(arr, a, b) {
+//         let temp = arr[a];
+//         arr[a] = arr[b];
+//         arr[b] = temp;
+//     }
 
-    function swap(arr, a, b) {
-        let temp = arr[a];
-        arr[a] = arr[b];
-        arr[b] = temp;
-    }
+//     // 元素不在0~n-1,返回-1
+//     return -1;
+// }
 
-
-    return -1;
-}
-
-let arr = [2, 5, 7, 2, 1, 7, 3];
-let result = findRepeatNumber(arr);
-
-//解法2
+//解法2  哈希方法
 var findRepeatNumber = function(nums) {
     //key 为具体的数字  value为数字个数
     let obj = {}
     for (let i = 0; i < nums.length; i++) {
         let num = nums[i]
         if (!obj[num]) {
-            obj[num] = 1
+            obj[num] = 1;
         } else {
-            obj[num] += obj[num]
-            return num
+            obj[num] += obj[num];
+            return num;
         }
     }
 };
+
+
+// test
+let arr = [3, 3, 1, 0, 2, 5, 3];
+
+// let result = findRepeatNumber(arr);
+console.log(findRepeatNumber(arr));
