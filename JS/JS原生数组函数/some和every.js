@@ -34,6 +34,7 @@ console.log([12, 15, 18, 11, 14].every(isGreatThan10)); //true
 [2, 3, 5, 7, 8].some(x => x > 10); //false  
 [2, 3, 5, 7, 18].every(x => x > 10); //false  
 
+
 // arrow function
 // x => x>10
 // ||

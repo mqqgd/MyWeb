@@ -154,7 +154,7 @@
 
 .nav .dropdown {
     float: left;
-    width: 207px;
+    width: 210px;
     height: 45px;
     background-color: #b1191a;
 }
@@ -174,8 +174,8 @@
 }
 
 .dropdown dd {
-    display: none;
-    width: 207px;
+    /* display: none; */
+    width: 210px;
     height: 31px;
     background-color: #c81623;
     line-height: 31px;

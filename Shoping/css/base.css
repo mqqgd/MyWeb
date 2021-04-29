@@ -57,7 +57,8 @@ button {
     outline: none;
 }
 
-.clearflix:after {
+
+/* .clearflix:after {
     visibility: hidden;
     clear: both;
     display: block;
@@ -67,4 +68,4 @@ button {
 
 .clearfix {
     *zoom: 1;
-}
+} */

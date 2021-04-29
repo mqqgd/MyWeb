@@ -1,0 +1,191 @@
+/* main部分 */
+
+
+/* 这里如果给了高度，就不需要清除浮动 */
+
+.main {
+    width: 980px;
+    height: 455px;
+    margin-top: 9px;
+    /* 问题，不在版心里边 */
+    margin-left: 220px;
+    /* 不给高度的话，底部footer会跑上来 */
+}
+
+.focus {
+    float: left;
+    width: 721px;
+    height: 455px;
+    background: url(../images/focus.jpg) no-repeat;
+}
+
+
+/* 快报 */
+
+.newsflash {
+    float: right;
+    width: 251px;
+    height: 455px;
+}
+
+
+/* 快报模块 */
+
+.news {
+    height: 165px;
+    border: 1px solid #e4e4e4;
+}
+
+.news-hd {
+    height: 34px;
+    line-height: 34px;
+    border-bottom: 1px dotted #e4e4e4;
+    padding: 0 15px;
+}
+
+.news-hd h5 {
+    float: left;
+    font-size: 14px;
+}
+
+.news-hd .more {
+    float: right;
+}
+
+.news-hd .more::after {
+    font-family: 'icomoon';
+    content: '\e920';
+}
+
+.news ul li {
+    height: 26px;
+    line-height: 27px;
+    margin-left: 17px;
+    /* 文字溢出部分省略号处理三部曲： */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+/* 快报中间部分 */
+
+.lifeservice {
+    /* 这里隐藏的是下边li超出的边框 */
+    overflow: hidden;
+    height: 210px;
+    border: 1px solid #e4e4e4;
+    border-top: 0;
+}
+
+.lifeservice ul {
+    width: 252px;
+}
+
+
+/* li只要给右边框和下边框，用浮动挤开就可 */
+
+.lifeservice ul li {
+    position: relative;
+    float: left;
+    width: 63px;
+    height: 70px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    text-align: center;
+}
+
+.lifeservice ul li i {
+    display: inline-block;
+    width: 19px;
+    height: 25px;
+    background: url(../images/icons.png) no-repeat -19px -15px;
+    margin-top: 15px;
+}
+
+.lifeservice ul li h5 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 14px;
+    height: 21px;
+    background-color: #589d5a;
+    color: #fff;
+    font-weight: 400;
+    font-size: 10px;
+}
+
+
+/* 绿色书签 */
+
+.lifeservice ul li h5::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 7px;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    border: 7px solid transparent;
+    /* 这里color不能省 */
+    border-bottom-color: #fff;
+}
+
+
+/* 快报第三部分 */
+
+.bargain {
+    margin-top: 5px;
+}
+
+
+/* 今日推荐部分 */
+
+.recommend {
+    height: 163px;
+}
+
+.recommend-l {
+    float: left;
+    width: 208px;
+    height: 100%;
+    padding-top: 32px;
+    margin-top: 10px;
+    background-color: #5c5251;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+}
+
+.recommend-r {
+    float: left;
+    width: 992px;
+    height: 163px;
+    margin-top: 10px;
+    background-color: #ebebeb;
+}
+
+.recommend-r ul li {
+    float: left;
+    width: 248px;
+    height: 143px;
+    margin-top: 10px;
+    border-right: 1px solid #ccc;
+}
+
+.recommend ul li:last-child {
+    border-right: 0;
+}
+
+.recommend ul li a {
+    color: #666;
+    text-decoration: none;
+}
+
+.recommend ul li a img {
+    border: 0;
+    /* 图片宽度要适应li的宽度，不然出不来边框 */
+    width: 100%;
+    vertical-align: middle;
+}
