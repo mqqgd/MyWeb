@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #eee;
+}
+
+body {
+    min-width: 320px;
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* 头部 */
+
+.header {
+    background: red;
+}
+
+.header>img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+
+/* 网格区域 */
+
+.main {
+    font-size: 14px;
+    color: #fff;
+}
+
+.main>.section {
+    display: flex;
+    height: 100px;
+    background-color: skyblue;
+    margin: 4px 2px;
+}
+
+.section:nth-child(2) .col {
+    background: #00a7f7;
+}
+
+.section:nth-child(3) .col {
+    background: #7cb832;
+}
+
+.section:nth-child(4) .col {
+    background: #ff9900;
+}
+
+.section>.col {
+    flex: 1;
+    height: 100%;
+    /* width: 250px; */
+    text-align: center;
+    border-left: 1px solid #fff;
+    background: #ff5555;
+}
+
+.seciton>.col:nth-child(1) {
+    border-left: none;
+}
+
+.section>.hotel>p {
+    margin: 15px 0;
+}
+
+.section>.hotel>img {
+    width: 42px;
+    height: 46px;
+}
+
+
+/* 头部每行的第二三部分 */
+
+.section>.col>div {
+    height: 50px;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+    line-height: 50px;
+}
+
+.section>.col>div:last-child {
+    border-bottom: none;
+}
+
+
+/* 第四行 */
+
+.section:last-child {
+    height: 50px;
+}
+
+
+/* 导航区域 */
+
+.nav {
+    background-color: #ccc;
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nav>ul {
+    display: flex;
+    height: 70px;
+    background: #fff;
+    /* border-bottom: 1px solid #ccc; */
+}
+
+.nav>ul>li {
+    flex: 1;
+    text-align: center;
+}
+
+.nav>ul>li>i {
+    display: inline-block;
+    margin-top: 12px;
+    width: 33px;
+    height: 33px;
+    background: url(../images/icons.png)no-repeat -35px -12px;
+}
+
+.nav>ul>li:nth-child(2)>i {
+    background-position: -124px -12px;
+}
+
+.nav>ul>li:nth-child(3)>i {
+    background-position: -212px -12px;
+}
+
+.nav>ul>li:nth-child(4)>i {
+    background-position: -300px -79px;
+}
+
+.nav>ul>li>p {
+    color: #666;
+    font-size: 12px;
+}
+
+
+/* 底部指引区 */
+
+.guide>ul {
+    display: flex;
+    height: 80px;
+    background-color: #fff;
+    color: #666;
+    font-size: 12px;
+}
+
+.guide>ul>li {
+    flex: 1;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.guide>ul>li>i {
+    /* 注意：display:inline-block不能忘 */
+    padding-top: 5px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #666;
+    border-radius: 50%;
+    font-size: 30px;
+}
+
+.guide>ul>li:nth-child(2)>i {
+    padding: 8px 0 0 1px;
+    font-size: 20px;
+}
+
+.guide>ul>li:nth-child(3)>i {
+    font-size: 25px;
+    padding: 6px 0 0 2px;
+}
+
+
+/* 底部 */
+
+.footer {
+    height: 50px;
+    background-color: #ccc;
+}
+
+.footer>p {
+    float: left;
+    line-height: 50px;
+    color: #666;
+}
+
+.footer>p:first-child {
+    margin-right: 10px;
+}
+
+.footer>p>a {
+    text-decoration: none;
+    color: #333;
+}
