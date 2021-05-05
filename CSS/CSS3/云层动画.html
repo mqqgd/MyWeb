@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            position: relative;
+            height: 300px;
+            margin: 100px auto;
+            animation: move 6s 0s infinite alternate;
+            transition: all 6s;
+            overflow: hidden;
+        }
+        
+        li {
+            list-style: none;
+            position: absolute;
+            width: 400%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+        
+        @keyframes move {
+            from {
+                background-color: skyblue;
+            }
+            to {
+                background-color: black;
+            }
+        }
+        
+        li:nth-child(1) {
+            /* 注意：这里需要平铺，否则云会不连续的 */
+            background: url(../images/cloud_one.png);
+            animation: one 30s linear 0s infinite alternate;
+        }
+        
+        li:nth-child(2) {
+            background: url(../images/cloud_two.png);
+            animation: two 30s linear 0s infinite alternate;
+        }
+        
+        li:nth-child(3) {
+            background: url(../images/cloud_three.png);
+            animation: three 30s linear 0s infinite alternate;
+        }
+        
+        @keyframes one {
+            from {
+                margin-left: 0;
+            }
+            to {
+                margin-left: -100%;
+            }
+        }
+        
+        @keyframes two {
+            from {
+                margin-left: 0;
+            }
+            to {
+                margin-left: -200%;
+            }
+        }
+        
+        @keyframes three {
+            from {
+                margin-left: 0;
+            }
+            to {
+                margin-left: -300%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+
+</html>
