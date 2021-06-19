@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+        function obj2str(obj) {
+            obj.t = new Date().getDate();
+            var res = [];
+            for (var key in obj) {}
+        }
+
+        function loadXMLDoc() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "http://39.99.35.121:8000/index/", true);
+            xhr.send();
+            xhr.onreadystatechange = function(e) {
+                if (xhr.readyState === 4) {
+                    if ((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304) {
+                        alert(JSON.parse(xhr.responseText));
+                        console.log(JSON.parse(xhr.responseText));
+                    } else {
+                        console.log("请求失败");
+                    }
+                }
+            };
+        }
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="loadXMLDoc()">提交</button>
+</body>
+
+</html>
