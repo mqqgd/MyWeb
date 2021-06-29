@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="../jQuery/jquery-3.5.1/jquery-3.5.1.js"></script>
+</head>
+
+<body>
+    <input type="text" placeholder="请输入搜索的内容：" />
+    <ul></ul>
+
+    <script>
+        /**
+                                                        jQuery1102021252437099400812_1624110795459(
+                                                        {
+                                                        "q":"i",
+                                                        "p":false,
+                                                        "g":[
+                                                            {"type":"sug","sa":"s_1","q":"iphone"},
+                                                            {"type":"sug","sa":"s_2","q":"iphone 12"},
+                                                            {"type":"sug","sa":"s_3","q":"ipad"},
+                                                            {"type":"sug","sa":"s_4","q":"ip"},
+                                                            {"type":"sug","sa":"s_5","q":"i问财"},
+                                                            {"type":"sug","sa":"s_6","q":"iphone13最新官方消息"},
+                                                            {"type":"sug","sa":"s_7","q":"iphone 11"},
+                                                            {"type":"sug","sa":"s_8","q":"iqoo是什么牌子手机"},
+                                                            {"type":"sug","sa":"s_9","q":"ip地址"},
+                                                            {"type":"sug","sa":"s_10","q":"instagram安卓下载"}
+                                                        ],
+                                                        "slid":"3968925055572022757",
+                                                        "queryid":"0x9744f4d8495e5"
+                                                    })
+
+                                                        https://www.baidu.com/sugrec?prod=pc&from=pc_web&wd=i&cb=jQuery110203028839711102269_1624111931170
+                                                    */
+
+        let $ul = $("ul");
+        $("input").on("input", function() {
+            // console.log(this.value);
+
+            // jQuery中jsonp的使用
+            $.ajax({
+                url: "https://www.baidu.com/sugrec?prod=pc&from=pc_web&wd=i=" +
+                    this.value,
+                data: {
+                    name: "yoomi",
+                    age: "24",
+                },
+                dataType: "jsonp",
+                jsonp: "cb",
+                // jsonpCallback: "",   //自定义回调函数名称
+                success: function(msg) {
+                    // console.log(msg);
+                    createItems(msg.g); //获取g数组
+                },
+            });
+        });
+
+        function createItems(list) {
+            $("ul>li").remove();
+            for (let i = 0; i <= list.length; i++) {
+                let $li = $("<li>" + list[i].q + "/<li>"); //获取g数组中的q
+                $ul.append($li);
+            }
+        }
+    </script>
+</body>
+
+</html>

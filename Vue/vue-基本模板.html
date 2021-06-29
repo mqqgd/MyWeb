@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>VUE-基本模板</title>
+    <script src="./js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 被控制区域的内容: View -->
+        <p>{{ name }}</p>
+    </div>
+
+    <script>
+        //2、创建Vue实例,得到 ViewModel
+        let vue = new Vue({
+            // 3、告诉Vue的实例对象，将来需要控制界面的哪个区域
+            el: "#app",
+            // 4、告诉Vue的实例对象，被控制区域的数据是什么   Model
+            data: {
+                // 要传递的数据
+                name: "yoomi",
+            },
+            methods: {},
+        });
+    </script>
+</body>
+
+</html>
